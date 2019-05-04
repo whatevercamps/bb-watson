@@ -1,0 +1,27 @@
+{
+  "name": "bb-watson",
+  "version": "1.0.0",
+  "description": "chat con watson para bankinbest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatevercamps/bb-watson.git"
+  },
+  "keywords": [
+    "watson"
+  ],
+  "author": "dj.bautista10@uniandes.edu.co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatevercamps/bb-watson/issues"
+  },
+  "homepage": "https://github.com/whatevercamps/bb-watson#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ibm-watson": "^4.1.0",
+    "watson-developer-cloud": "^4.0.1"
+  }
+}
