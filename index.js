@@ -3,6 +3,13 @@ const bodyParser = require('body-parser');
 const AssistantV1 = require('watson-developer-cloud/assistant/v1');
 const AssistantV2 = require('ibm-watson/assistant/v2');
 const app = express();
+const https = require("https"),
+  fs = require("fs");
+
+const options = {
+  cert: fs.readFileSync("/etc/letsencrypt/live/bankinbest.tk/fullchain.pem"),
+  key: fs.readFileSync("/etc/letsencrypt/live/bankinbest.tk/privkey.pem")
+};
 
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
@@ -147,3 +154,5 @@ app.get('/conversation/:text*?', (req, res) => {
 });
 
 app.listen(port, () => console.log('Escucha en el puerto ' + port));
+
+https.createServer(options, app).listen(8080);
